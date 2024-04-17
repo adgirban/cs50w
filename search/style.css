@@ -1,0 +1,28 @@
+input[type = "text"] {
+    border-radius: 20px;
+}
+
+input[type = "text"]:hover {
+    background-color: #77747405;
+}
+input[type = "text"]:focus {
+    border: 1px solid rgba(77, 75, 75, 0.572);
+    box-shadow: none;
+}
+
+.h5 {
+    border-bottom: 1px solid rgba(90, 84, 84, 0.355);
+}
+
+#adv {
+    border-radius: 0;
+    border: 1px solid rgba(50, 48, 48, 0.482);
+}
+
+#small {
+    font-size: x-small;
+}
+
+#advbut {
+    border-radius: 5px;
+}
