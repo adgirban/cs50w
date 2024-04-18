@@ -1,0 +1,61 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="col my-3 border border-secondary-subtle">
+        <h2>Add a New Post</h2>
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            <textarea class="form-control" name="content" rows="3" placeholder="What's on your mind?"></textarea>
+            <button class="btn btn-primary my-2" type="submit">Post</button>
+        </form>
+    </div>
+    {% for post in postsOfPage %}
+
+    <div class="col mt-3 mb-1 border border-secondary-subtle post">
+        <h4>{{ post.user }}</h4>
+        <p class="content my-0" id="content_{{ post.id }}">{{ post.content }}</p>
+        <textarea class="form-control" name="contentarea" id="textarea_{{ post.id }}" rows="3" style="display: none">{{ post.content }}</textarea>
+        <p class="text-secondary my-0">{{ post.date }}</p>
+        {% if user.is_authenticated %}
+        {% if user == post.user %}
+        <button class="btn btn-secondary p-2 mb-2" id="edit_{{ post.id }}" onclick="startEdit({{ post.id }})">
+            Edit
+        </button>
+        <button class="btn btn-secondary p-2 mb-2" id="save_{{ post.id }}" style="display: none" onclick="submitHandler({{ post.id }})">
+            Save and Edit
+        </button>
+        {% else %}
+        {% if post.id in likedList %}
+        <p>
+            <button class="fa-solid fa-heart border-0 bg-transparent" id="{{ post.id }}" onclick="likeHandler({{ post.id }}, {{ likedList }})"></button>
+            <b id="count_{{ post.id }}">{{post.likes}}</b>
+        </p>
+        {% else %}
+        <p>
+            <button class="fa-regular fa-heart border-0 bg-transparent" id="{{ post.id }}" onclick="likeHandler({{ post.id }}, {{ likedList }})"></button>
+            <b id="count_{{ post.id }}">{{post.likes}}</b>
+        </p>
+        {% endif %}
+        {% endif %}
+        {% endif %}
+    </div>
+
+    {% endfor %}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination d-flex justify-content-center">
+            {% if postsOfPage.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?=page{{ postsOfPage.previous_page_number }}">Previous</a>
+            </li>
+            {% endif %} {% if postsOfPage.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?=page{{ postsOfPage.next_page_number }}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endif %}
+{% endblock %}
