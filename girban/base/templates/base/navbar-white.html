@@ -1,0 +1,40 @@
+{% load static %}
+<nav class="navbar" id="navbar-white">
+    <div class="container-fluid mx-4">
+        <img class="ms-3" src="{% static 'base/images/Favicon-dark-girban.svg' %}" alt="logo" height="40px">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <h6 class="d-inline text-dark">MENU</h6>
+            <span class="navbar-toggler-icon"><i class="fas fa-bars text-dark" style="font-size:28px;"></i></span>
+        </button>
+        <div class="container-fluid offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="mx-4 offcanvas-header">
+                <img src="{% static 'base/images/Faviocn-girban.svg' %}" height="40px" alt="logo" class="offcanvas-title" id="offcanvasNavbarLabel">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="container-fluid offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mx-4">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">
+                            WORK
+                            <div class="divider mb-4"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'about' %}">
+                            ABOUT
+                            <div class="divider mb-4"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'contact' %}"">
+                            CONTACT
+                            <div class=" divider mb-4">
+            </div>
+            </a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</nav>
+</nav>

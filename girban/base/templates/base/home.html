@@ -1,0 +1,17 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'base/navbar.html' %}
+<div class="container-fluid d-flex flex-column title">
+    <div class="row d-flex justify-content-center title-row my-auto">
+        <img src="{% static 'base/images/Logo-girban.svg' %}" alt="logo" height="110px">
+        <h1 class="text-center">GIRBAN ADHIKARI</h1>
+        <div class="small-line"></div>
+        <h4 class="text-center mt-2">ENGINEER + DEVELOPER</h4>
+    </div>
+    <div class="row text-center pb-3">
+        <i class="fa-solid fa-caret-down text-light fs-1 bounce2"></i>
+    </div>
+</div>
+{% endblock body %}
