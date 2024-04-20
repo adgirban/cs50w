@@ -25,10 +25,6 @@ nav {
     background: linear-gradient(to left, #191D20 50%, #101011 50%);
 }
 
-#about {
-    height: 100%;
-}
-
 #offcanvasNavbar {
     width: 100vw;
     height: 100vh;
@@ -78,6 +74,14 @@ h4 {
     letter-spacing: 3px;
     overflow: hidden;
 }
+.about-me {
+    font-weight: 400;
+    overflow: hidden;
+}
+
+h5{
+    font-weight: 800;
+}
 
 h6 {
     font-weight: 800;
@@ -96,7 +100,9 @@ h6 {
       60% {transform: translateY(-10px);}
   }
 
-
+.my-img {
+    width: 25%;
+}
 
 
 

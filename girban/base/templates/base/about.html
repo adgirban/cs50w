@@ -1,8 +1,42 @@
 {% extends 'base/layout.html' %}
+{% load static %}
 
 {% block body %}
 {% include 'base/navbar-white.html' %}
-<div class="container-fluid" id="about">
+<div class="container-fluid d-flex flex-column" id="about">
+    <div class="container px-5">
+        <div class="row d-flex justify-content-center title-row">
+            <img src="{% static 'base/images/about.png' %}" alt="logo" class="my-img my-4">
+            <h1 class="text-center text-dark">hey there, i'm girban – a full stack developer</h1>
+            <div class="small-line" style="border-top: 10px solid red"></div>
+            <p class="text-center text-dark mt-4 about-me fs-4">
+                As an art director, designer and front-end developer, I have been building interactive experiences, creating brands and designing print materials for over eight years. I’m a fan of structure and simplicity in both design and code; organization and consistency are very important to me. <br><br>
 
+                A few of my strengths are creative concept and strategy development, art direction, creative direction, UI/UX design, front-end development, typography, and bridging communication between developers and designers. <br><br>
+
+                I find inspiration in nature, architecture, vintage fashion, indie electronica, science fiction and good lattes. When I’m not working, you can find me at a local coffee house, exploring indie art fairs, kickboxing, or even enjoying an old-fashioned cocktail. <br><br>
+            </p>
+        </div>
+
+        <div class="row gy-5">
+            <div class="col-md-6 ">
+                <h5 class="text-left text-dark">CLIENTS I'VE WORKED WITH</h5>
+                <div class="small-line" style="border-top: 10px solid red"></div>
+                <p class="text-left text-dark mt-4 about-bottom fs-6 me-5">
+                    Detroit Riverfront Conservancy, Midtown Detroit Inc, Detroit Economic Growth Corporation, Eaton Steel Bar Company, Detroit Institute of Arts, DTE Energy, Art X Detroit, Dlectricity, Braun Construction, Habitually Hopeful
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <h5 class="text-left text-dark">ACCOLADES & AWARDS</h5>
+                <div class="small-line" style="border-top: 10px solid red"></div>
+                <p class="text-left text-dark mt-4 about-bottom fs-6 me-5">
+                    Awwwards Honorable Mention 2014 <br>
+                    Eaton Steel Bar Company - WMA WebAward 2013 <br>
+                    Art X Detroit - GD USA 2012 <br>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock body %}
