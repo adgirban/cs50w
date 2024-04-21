@@ -34,17 +34,12 @@ Running this meticulously crafted Django portfolio app is a seamless experience,
 
 ## Additional Information:
 
-1. This project transcends mere technical proficiency, embodying a deep passion for web development and a commitment to excellence.
-
-2. External APIs are seamlessly integrated to elevate the user experience, showcasing a mastery of modern web technologies.
-
-3. Rigorous testing has been conducted to ensure flawless functionality and performance, reflecting a dedication to quality and reliability.
-
-4. Deployment strategies, while varied, are executed with precision and attention to detail, ensuring seamless operation in diverse environments.
-
-5. Notably, the project features two additional models: Tag for tools used in project development, and Work representing the actual work undertaken, adding depth and nuance to the application's data structure.
-
-6. Bootstrap, the industry-leading CSS framework, has been judiciously employed throughout the project, harmonizing form and function with meticulous precision.
+- This project transcends mere technical proficiency, embodying a deep passion for web development and a commitment to excellence.
+- External APIs are seamlessly integrated to elevate the user experience, showcasing a mastery of modern web technologies.
+- Rigorous testing has been conducted to ensure flawless functionality and performance, reflecting a dedication to quality and reliability.
+- Deployment strategies, while varied, are executed with precision and attention to detail, ensuring seamless operation in diverse environments.
+- Notably, the project features two additional models: Tag for tools used in project development, and Work representing the actual work undertaken, adding depth and nuance to the application's data structure.
+- Bootstrap, the industry-leading CSS framework, has been judiciously employed throughout the project, harmonizing form and function with meticulous precision.
 
 ## Conclusion:
 
