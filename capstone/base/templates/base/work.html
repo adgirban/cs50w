@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="container-fluid" id="work">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 project">
+        {% for work in works %}
+        <div class="col card bb p-0">
+            <a href="#">
+                <img class="thumbnail" src="{{ work.thumbnail.url }}" alt="pic">
+                <div class="card-content">
+                    <h5>{{ work.headline }}
+                        <div class="small-line" style="border-top: 5px solid red; width: 20%;"></div>
+                    </h5>
+                    <p class="button fs-5">
+                        {{ work.sub_headline }} <br>
+                        {% for tag in work.tags.all %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

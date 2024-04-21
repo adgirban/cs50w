@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background: linear-gradient(to left, #191D20 50%, #101011 50%); */
+    color: #988345;
+    font-family: "Josefin Sans", sans-serif;
+    height: 100vh;
+}
+
+nav {
+    height: 15%;
+    background: linear-gradient(to left, #191D20 50%, #101011 50%);
+}
+
+.title {
+    height: 85%;
+    background: linear-gradient(to left, #191D20 50%, #101011 50%);
+}
+
+#contact {
+    height: 85vh;
+    overflow: hidden;
+}
+
+#work {
+    height: 50vh;
+}
+
+.project {
+    height: 100%;
+    padding: 0;
+}
+
+#offcanvasNavbar {
+    width: 100vw;
+    height: 100vh;
+    background-color: #101011d7;
+}
+
+.offcanvas-header{
+    height: 15%;
+}
+
+.offcanvas-body{
+    height: 85%;
+}
+
+.btn-close {
+    font-size: large;
+}
+
+.nav-link {
+    letter-spacing: 2px;
+}
+
+.divider {
+    border-top: 2px solid white;
+}
+
+.small-line {
+    border-top: 10px solid white;
+    width: 5%;
+}
+
+h1{
+    font-weight: 800;
+    letter-spacing: 2px;    
+    overflow: hidden;
+    font-size: 80px;
+}
+
+h2, h5, h6{
+    font-weight: 800;
+    overflow: hidden;
+}
+
+h4 {
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+    overflow: hidden;
+    font-size: 25px;
+}
+.about-me {
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.title-row {
+    height: 50%;
+}
+
+.bounce2 {
+    animation: bounce2 5s ease infinite;
+  }
+  @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-20px);}
+      60% {transform: translateY(-10px);}
+  }
+
+.my-img {
+    width: 300px;
+}
+
+.tag {
+    display: inline-block;
+    color: black;
+    background-color: #988345;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 50px;
+    }
+    h4{
+        font-size: 15px;
+    }
+  }
+@media only screen and (max-width: 280px) {
+    h1{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 10px;
+    }
+  }
+
+  .bb {
+    border: 2px solid #101011;
+  }
+
+
+  /* Card */
+.card {
+  border-radius: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  height: 100%;
+ 
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: opacity 3s ease-out;
+    filter: brightness(10%);
+  }
+
+  h5 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .2s .1s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+  }
+  
+  p {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+  }
+  
+  p {
+    inset: auto auto 40px 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  &:hover h5 {
+    inset: auto auto 180px 30px;
+    transition: inset .3s ease-out;
+  }
+  
+  &:hover p {
+    opacity: 1;
+    transition: opacity .3s ease-in;
+  }
+  
+  &:hover img {
+    transition: filter 5s ease-in;
+    opacity: 1;
+    filter: brightness(50%);
+  }
+
+}
