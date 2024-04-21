@@ -1,6 +1,10 @@
 {% extends 'base/layout.html' %}
 {% load static %}
 
+{% block title %}
+Girban Adhikari
+{% endblock title %}
+
 {% block body %}
 {% include 'base/navbar.html' %}
 <div class="container-fluid d-flex flex-column title">
@@ -11,10 +15,9 @@
         <h4 class="text-center mt-4">ENGINEER + DEVELOPER</h4>
     </div>
     <div class="row text-center pb-3">
-        <a href="" class="text-decoration-none fa-solid fa-caret-down text-light fs-1 bounce2"></a>
+        <a href="#work" class="text-decoration-none fa-solid fa-caret-down text-light fs-1 bounce2"></a>
     </div>
 </div>
-<div class="container-fluid" id="work">
-    {% include 'base/work.html' %}
-</div>
+
+{% include 'base/work.html' %}
 {% endblock body %}

@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* background: linear-gradient(to left, #191D20 50%, #101011 50%); */
     color: #988345;
@@ -30,12 +34,11 @@ nav {
 }
 
 #work {
-    height: 100vh;
-    padding: 0;
+    height: 50vh;
 }
 
 .project {
-    height: 50%;
+    height: 100%;
     padding: 0;
 }
 
@@ -111,6 +114,15 @@ h4 {
     width: 300px;
 }
 
+.tag {
+    display: inline-block;
+    color: black;
+    background-color: #988345;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px 5px;
+}
+
 @media only screen and (max-width: 600px) {
     h1{
         font-size: 50px;
@@ -129,10 +141,8 @@ h4 {
   }
 
   .bb {
-    border: 2px solid black;
+    border: 2px solid #101011;
   }
-
-
 
 
   /* Card */
@@ -149,46 +159,48 @@ h4 {
     height: 100%;
     opacity: 0.9;
     transition: opacity .2s ease-out;
+    filter: brightness(10%);
   }
 
-  h4 {
+  h5 {
     position: absolute;
     inset: auto auto 30px 30px;
     margin: 0;
-    transition: inset .3s .3s ease-out;
+    transition: inset .2s .1s ease-out;
     text-transform: uppercase;
+    letter-spacing: 0px;
   }
   
-  a {
+  p {
     position: absolute;
     opacity: 0;
     max-width: 80%;
     transition: opacity .3s ease-out;
   }
   
-  a {
+  p {
     inset: auto auto 40px 30px;
-    color: inherit;
+  }
+
+  a {
     text-decoration: none;
+    color: white;
   }
   
-  &:hover h4 {
-    inset: auto auto 80px 30px;
+  &:hover h5 {
+    inset: auto auto 180px 30px;
     transition: inset .3s ease-out;
   }
   
-  &:hover a {
+  &:hover p {
     opacity: 1;
-    transition: opacity .5s .1s ease-in;
+    transition: opacity .1s ease-in;
   }
   
   &:hover img {
-    transition: opacity .3s ease-in;
+    transition: filter .3s ease-in;
     opacity: 1;
+    filter: brightness(50%);
   }
 
-}
-
-.material-symbols-outlined {
-  vertical-align: middle;
 }
