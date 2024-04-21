@@ -12,7 +12,6 @@ body {
     color: #988345;
     font-family: "Josefin Sans", sans-serif;
     height: 100vh;
-    min-height: 100vh;
 }
 
 nav {
@@ -25,10 +24,25 @@ nav {
     background: linear-gradient(to left, #191D20 50%, #101011 50%);
 }
 
+#contact {
+    height: 85vh;
+    overflow: hidden;
+}
+
+#work {
+    height: 100vh;
+    padding: 0;
+}
+
+.project {
+    height: 50%;
+    padding: 0;
+}
+
 #offcanvasNavbar {
     width: 100vw;
     height: 100vh;
-    background-color: #101011c0;
+    background-color: #101011d7;
 }
 
 .offcanvas-header{
@@ -44,7 +58,6 @@ nav {
 }
 
 .nav-link {
-    font-size: 90px;
     letter-spacing: 2px;
 }
 
@@ -57,34 +70,28 @@ nav {
     width: 5%;
 }
 
-.bb{
-    border: 2px solid white;
-}
-
 h1{
     font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 70px;
+    letter-spacing: 2px;    
+    overflow: hidden;
+    font-size: 80px;
+}
+
+h2, h5, h6{
+    font-weight: 800;
     overflow: hidden;
 }
 
 h4 {
     font-weight: 800;
     color: white;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     overflow: hidden;
+    font-size: 25px;
 }
 .about-me {
     font-weight: 400;
     overflow: hidden;
-}
-
-h5{
-    font-weight: 800;
-}
-
-h6 {
-    font-weight: 800;
 }
 
 .title-row {
@@ -101,9 +108,87 @@ h6 {
   }
 
 .my-img {
-    width: 25%;
+    width: 300px;
 }
 
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 50px;
+    }
+    h4{
+        font-size: 15px;
+    }
+  }
+@media only screen and (max-width: 280px) {
+    h1{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 10px;
+    }
+  }
+
+  .bb {
+    border: 2px solid black;
+  }
 
 
 
+
+  /* Card */
+.card {
+  border-radius: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  height: 100%;
+ 
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+
+  h4 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    text-transform: uppercase;
+  }
+  
+  a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+  }
+  
+  a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  &:hover h4 {
+    inset: auto auto 80px 30px;
+    transition: inset .3s ease-out;
+  }
+  
+  &:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+  }
+  
+  &:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+  }
+
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}

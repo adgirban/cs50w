@@ -1,5 +1,17 @@
-{% extends 'base/layout.html' %}
-
-{% block body %}
-<h1>Work</h1>
-{% endblock body %}
+{% load static %}
+<div class="row row-cols-3 bb project">
+    <div class="col card bb">
+        <img src="{% static 'base/images/habitually-preview.jpg' %}" alt="pic">
+        <div class="card-content">
+            <h4>
+                Card Heading
+            </h4>
+            <a href="#" class="button">
+                Find out more
+                <span class="material-symbols-outlined">
+                    arrow_right_alt
+                </span>
+            </a>
+        </div>
+    </div>
+</div>

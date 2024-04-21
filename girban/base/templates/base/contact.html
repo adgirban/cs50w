@@ -1,5 +1,37 @@
 {% extends 'base/layout.html' %}
+{% load static %}
 
 {% block body %}
-<h1>Contact</h1>
-{% endblock %}
+{% include 'base/navbar-white.html' %}
+<div class="container-fluid d-flex flex-column pt-5" id="contact">
+    <div class="row d-flex justify-content-center">
+        <h1 class="text-center text-dark">LETS GET IN TOUCH.</h1>
+        <div class="small-line" style="border-top: 10px solid red"></div>
+        <h2 class="text-center text-dark mt-4" style="font-weight: 800;">GIRBAN ADHIKARI</h2>
+        <h3 class="text-center" style="font-weight: 400;">adhikarigirban10@gmail.com</h3>
+        <h4 class="text-center text-dark mt-2" style="font-weight: 400;">+977 9840904511</h4>
+    </div>
+
+
+    <div class="container pt-5">
+        <div class="row gy-5">
+            <div class="col-md-6">
+                <h5 class="text-left text-dark">LINKEDIN</h5>
+                <div class="col-1" style="border-bottom: 10px solid red"></div>
+                <p class="mt-3 text-wrap">
+                    <a href="https://www.linkedin.com/in/adgirban/" target="_blank" class="text-dark fs-5">
+                        https://www.linkedin.com/in/adgirban/
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h5 class="text-left text-dark">RESUME</h5>
+                <div class="col-1" style="border-bottom: 10px solid red"></div>
+                <p class="mt-3 text-wrap">
+                    <a href="https://www.linkedin.com/in/girban-adhikari-0b1b3b1b1/" target="_blank" class="text-dark fs-5">Download Resume</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
