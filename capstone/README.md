@@ -1,4 +1,4 @@
-# Django Portfolio App README
+# Django Portfolio App
 
 ## Project Overview:
 
